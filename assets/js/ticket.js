@@ -29,7 +29,7 @@ const printTicketNumber = (getMoviename) => {
     <div class="ticket">
       <header class="ticket__wrapper">
         <div class="ticket__header">
-          <img  class="qr-code" src="./images/QR-code.png">
+          <img  class="qr-code" src="../../assets/images/QR-code.png">
         </div>
       </header>
       <div class="ticket__divider">

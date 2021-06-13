@@ -6,13 +6,13 @@ let getLanguage = document.getElementById('getLanguage');
 let getGenre = document.getElementById('getGenre');
 let cityLogo = document.getElementById('cityLogo')
 clearLocalStorage()
-
+headerpicture();
 
 // HTTP Request
 
 const fetchMovies = ()=> {
 
-fetch('../movies.json')
+fetch('../../movies.json')
 .then(res => res.json())
 .then(data => {
   getMovies = data.movies.filter((elem) => elem.city.includes(getCityLocal)); 
@@ -72,6 +72,7 @@ function getData(genre, lang) {
       }
     })
     return data;
+
   } else if (genre == "" && lang != "") {
     let data = [];
     getMovies.forEach((elem) => {
@@ -80,6 +81,7 @@ function getData(genre, lang) {
       }
     })
     return data
+
   } else if (genre != "" && lang != "") {
     let data = [];
     getMovies.forEach((elem) => {
@@ -95,16 +97,17 @@ function getData(genre, lang) {
 function headerpicture() {
   if(localStorage.getItem('city') == 'hyderabad'){
     getCity.innerText = 'Hyderabad';
-    cityLogo.src = '../images/hyd.png'
+    cityLogo.src = '../../assets/images/hyd.png'
   }else if(localStorage.getItem('city') == 'bangalore'){
     getCity.innerText = 'Bangalore';
-    cityLogo.src = '../images/bengalore.png'
+    cityLogo.src = '../../assets/images/bengalore.png'
 } else if(localStorage.getItem('city') == 'mumbai'){
   getCity.innerText = 'Mumbai';
-  cityLogo.src = '../images/mumbai.png'
+  cityLogo.src = '../../assets/images/mumbai.png'
 }
 }
-headerpicture();
+
+
 
 
 

@@ -251,6 +251,10 @@ background-color: rgba(0,0,0,0.75);
     cursor:pointer;
   }
 
+  .cityLogo {
+    height:200px;
+  }
+
   /* Movies  */
 .movie {
   margin-left: 1rem;

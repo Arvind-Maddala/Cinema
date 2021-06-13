@@ -95,13 +95,13 @@ function getData(genre, lang) {
 function headerpicture() {
   if(localStorage.getItem('city') == 'hyderabad'){
     getCity.innerText = 'Hyderabad';
-    cityLogo.src = './images/hyd.png'
+    cityLogo.src = '../images/hyd.png'
   }else if(localStorage.getItem('city') == 'bangalore'){
     getCity.innerText = 'Bangalore';
-    cityLogo.src = './images/bengalore.png'
+    cityLogo.src = '../images/bengalore.png'
 } else if(localStorage.getItem('city') == 'mumbai'){
   getCity.innerText = 'Mumbai';
-  cityLogo.src = './images/mumbai.png'
+  cityLogo.src = '../images/mumbai.png'
 }
 }
 headerpicture();

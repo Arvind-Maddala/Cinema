@@ -4,7 +4,7 @@ Cinema is a Online movie booking app, where the movies from multiple cities, con
 
 ## Demo Link:
 
-[Click here](https://cinema-by-aravind-maddala.netlify.app/)
+[Click here](https://cinema-by-arvind-maddala.netlify.app/)
 
 ## Tech / Stack:
 

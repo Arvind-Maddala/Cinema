@@ -85,18 +85,17 @@ border: 1px solid rgba( 255, 255, 255, 0.18 );
 
 .showcase {
   background-color: rgba(0, 0, 0, 0.3);
-  padding: 5px 10px;
+  padding: 5px 0;
   border-radius: 5px;
   color: #fff;
   list-style-type: none;
-  z-index: 1;
 }
 
 .showcase li {
   display: flex;
   align-items: center;
   justify-content: center;
-  margin: 0 10px;
+  margin: 0 2px;
 }
 
 
@@ -203,5 +202,12 @@ p.text span {
   font-size:1rem;
 }
 
+.movie-container .row{
+  width:80%;
+}
+
+.seat:nth-last-child(-n+3){
+  display:none;
+}
  
   }

@@ -20,7 +20,7 @@
 /* Nav Bar */
 
 .nav-background {
-  background: url(./images/img1.jpg);
+  background: url(../images/img1.jpg);
   background-size:cover;
   background-attachment: fixed;
   position: relative;
@@ -163,7 +163,7 @@ background-color: rgba(0,0,0,0.75);
 
 
 .parallax-1 {
-  background: url(./images/food-image.jpg);
+  background: url('../images/food-image.jpg');
   background-size:cover;
   background-attachment: fixed;
 }

@@ -1,0 +1,94 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <!-- Required meta tags -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+    <!-- Bootstrap CSS -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-+0n0xVW2eSR5OomGNYDnhzAbDsOXxcvSN1TPprVMTNDbiYZCxYbOOl7+AMvyTG2x" crossorigin="anonymous">
+    <link href="https://cdn.jsdelivr.net/npm/remixicon@2.5.0/fonts/remixicon.css" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css" integrity="sha512-iBBXm8fW90+nuLcSKlbmrPcLa0OT92xO1BIsZ+ywDWZCvqsWgccV3gFoRBv0z+8dLJgyAHIhR35VZc2oM/gI1w==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+
+    <link rel="stylesheet" href="./style.css">
+
+    <title>Cinema</title>
+  </head>
+  <body>
+    <header class="container-fluid movie-banner">
+      <nav class="navbar navbar-expand-lg container navigation-wrap ">
+        <div class="container-fluid">
+          <a class="navbar-brand" href="index.html"> <img style="width: 100px;" src="./images/logo1.png"></a>
+          <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+            <i class="fas fa-bars navbar-toggler-icon"></i>
+          </button>
+          <div class="collapse navbar-collapse" id="navbarSupportedContent">
+            <ul class="navbar-nav ms-auto text-center">
+               <li class="nav-item me-5">
+                <a class="nav-link active" aria-current="page" href="#">Book Tickets</a>
+              </li>
+              <li class="nav-item me-5">
+                <a class="nav-link active" aria-current="page" href="#">Now Playing</a>
+              </li>
+              <li class="nav-item me-5">
+                <a class="nav-link active" aria-current="page" href="#">Coming Soon</a>
+              <li class="nav-item me-5">
+                <button class="btn-hover color-1"> Login</button>
+              </li>
+            </ul>
+          </div>
+        </div>
+      </nav>
+      <div class="movie-header-context d-lg-flex justify-content-center align-items-center text-center">
+        <h2>Movies Playing in <span id="getCity" class="header-city"></span>  </h2> 
+      <img class="city-logo"  id="cityLogo" src=''>
+      </div>
+      <div class="input-container d-lg-flex">
+          <div class="input-group p-1">
+            <label class="input-group-text w-25" for="getLanguage">Language : </label>
+            <select name="" id="getLanguage" class="form-control">
+              <option value="">Select Language</option>
+              <option value="hindi">Hindi</option>
+              <option value="english">English</option>
+              <option value="chinese">Chinese</option>
+              <option value="korean">Korean</option>
+              <option value="singapore">Signapore</option>
+              <option value="tamil">Tamil</option>
+              <option value="gujrati">Gujrati</option>
+            </select>
+          </div>
+          <div class="input-group p-1">
+            <label class="input-group-text w-25" for="getGenre">Genre : </label>
+            <select class="form-control" name="" id="getGenre">
+              <option value="">Select Genre</option>
+              <option value="action">Action</option>
+              <option value="love">Love</option>
+              <option value="drama">Drama</option>
+            </select>
+          </div>
+          </div>
+    </header>
+      <main id="main" class="main d-flex flex-wrap justify-content-center align-items-center container-fluid"> 
+      </main>
+      <footer class="container-fl d-flex flex-column justify-content-center align-items-center footer">
+        <img src="./images/logo1.png" class="footer-image">
+        <div class="footer-menu">
+          <h4>About us | Contact us | TermsOfUse | FAQ | Feedback  | Privacy Policy</h4>
+        </div>
+        <p>@2021 <span class="cinema">Cinema</span> All Rights Reserved</p>
+        <div class="social-icons">
+          <img src="./images/iconfinder_5296765_camera_instagram_instagram logo_icon_64px.png">
+          <img src="./images/iconfinder_5365678_fb_facebook_facebook logo_icon_64px.png">
+          <img src="./images/iconfinder_5296521_play_video_vlog_youtube_youtube logo_icon_64px.png">
+          <img src="./images/iconfinder_5296516_tweet_twitter_twitter logo_icon_64px.png">
+          <img src="./images/iconfinder_5296503_inspiration_pin_pinned_pinterest_social network_icon_64px.png">
+          <img src="./images/iconfinder_5296519_video_vimeo_vimeo logo_icon_64px.png">
+          <img src="./images/iconfinder_5296511_network_social network_tumblr_tumblr logo_icon_64px.png">
+        </div>
+     
+      </footer>
+      <button id='scroll-button'><i class="ri-arrow-up-line"></i></button>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.1/dist/js/bootstrap.bundle.min.js" integrity="sha384-gtEjrD/SeCtmISkJkNUaaKMoLD0//ElJ19smozuHV6z3Iehds+3Ulb9Bn9Plx0x4" crossorigin="anonymous"></script>
+    <script src="./js/movies.js"></script>
+  </body>
+</html>

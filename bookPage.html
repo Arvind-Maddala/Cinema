@@ -1,0 +1,149 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <!-- Required meta tags -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+    <!-- Bootstrap CSS -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-+0n0xVW2eSR5OomGNYDnhzAbDsOXxcvSN1TPprVMTNDbiYZCxYbOOl7+AMvyTG2x" crossorigin="anonymous">
+    <link href="https://cdn.jsdelivr.net/npm/remixicon@2.5.0/fonts/remixicon.css" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css" integrity="sha512-iBBXm8fW90+nuLcSKlbmrPcLa0OT92xO1BIsZ+ywDWZCvqsWgccV3gFoRBv0z+8dLJgyAHIhR35VZc2oM/gI1w==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+
+    <link rel="stylesheet" href="./style1.css">
+
+    <title>Cinema</title>
+  </head>
+  <body>
+   
+    <main class="main d-flex  justify-content-center align-items-center" >
+      <div class="glass-overlay container">
+        <div class="context  d-lg-flex container-fluid justify-content-around align-items-center">
+          <div id="movieTicket">
+          <div class="text-center">
+            <img src="./images/movie-poster.jpg" class="card-img-top mt-5" alt="${Title}" style="width:300px; min-height:100%"/>
+            <div class="card-body">
+              <h5 class="card-title">Avengers</h5>
+                <a href="#" class="btn btn-danger bookNow"  >Confirm Booking</a>
+            </div>
+          </div>
+        </div>
+        <div class="movie-screen d-flex flex-column ">
+          <ul class="showcase d-flex justify-content-center align-items-center">
+            <li>
+              <div class="seat"></div>
+              <small>N/A</small>
+            </li>
+          
+            <li>
+              <div class="seat selected"></div>
+              <small>Selected</small>
+            </li>
+          
+            <li>
+              <div class="seat occupied"></div>
+              <small>Occupied</small>
+            </li>
+          </ul>
+          
+          <div class="movie-container d-flex flex-column justify-content-center align-items-center">
+            <div class="screen"></div>
+            <div class="row">
+              <div class="seat" id="A-1"></div>
+              <div class="seat"  id="A-2"></div>
+              <div class="seat"  id="A-3"></div>
+              <div class="seat" id="A-4"></div>
+              <div class="seat" id="A-5"></div>
+              <div class="seat" id="A-6"></div>
+              <div class="seat" id="A-7"></div>
+              <div class="seat" id="A-8"></div>
+            </div>
+            <div class="row">
+              <div class="seat" id="B-1"></div>
+              <div class="seat" id="B-2"></div>
+              <div class="seat" id="B-3"></div>
+              <div class="seat occupied" id="B-4"></div>
+              <div class="seat occupied" id="B-5"></div>
+              <div class="seat" id="B-6"></div>
+              <div class="seat" id="B-7"></div>
+              <div class="seat" id="B-8"></div>
+            </div>
+          
+            <div class="row">
+              <div class="seat"  id="C-1"></div>
+              <div class="seat" id="C-3"></div>
+              <div class="seat" id="C-3"></div>
+              <div class="seat" id="C-4"></div>
+              <div class="seat" id="C-5"></div>
+              <div class="seat" id="C-6"></div>
+              <div class="seat occupied" id="C-7"></div>
+              <div class="seat occupied" id="C-8"></div>
+            </div>
+          
+            <div class="row">
+              <div class="seat" id="D-1" ></div>
+              <div class="seat" id="D-2" ></div>
+              <div class="seat" id="D-3" ></div>
+              <div class="seat" id="D-4" ></div>
+              <div class="seat" id="D-5" ></div>
+              <div class="seat" id="D-6" ></div>
+              <div class="seat" id="D-7" ></div>
+              <div class="seat" id="D-8" ></div>
+            </div>
+          
+            <div class="row">
+              <div class="seat" id="E-1"></div>
+              <div class="seat" id="E-2"></div>
+              <div class="seat" id="E-3"></div>
+              <div class="seat occupied" id="E-4"></div>
+              <div class="seat occupied" id="E-5"></div>
+              <div class="seat" id="E-6"></div>
+              <div class="seat" id="E-7"></div>
+              <div class="seat" id="E-8"></div>
+            </div>
+          
+            <div class="row">
+              <div class="seat" id="F-1"></div>
+              <div class="seat" id="F-2"></div>
+              <div class="seat" id="F-3"></div>
+              <div class="seat" id="F-4"></div>
+              <div class="seat occupied" id="F-5"></div>
+              <div class="seat occupied" id="F-6"></div>
+              <div class="seat occupied" id="F-7"></div>
+              <div class="seat" id="F-8"></div>
+            </div>
+            <p class="text text-start p-3">
+               Seats Selected: <span id=seatNumbers></span>
+              </p>
+          </div>
+          
+          
+        </div>
+        
+          </div>
+      </div>
+      
+    </main>
+   
+      <footer class="container-fluid d-flex flex-column justify-content-center align-items-center footer">
+        <img src="./images/logo1.png" class="footer-image">
+        <div class="footer-menu">
+          <h4>About us | Contact us | TermsOfUse | FAQ | Feedback  | Privacy Policy</h4>
+        </div>
+        <p>@2021 <span class="cinema">Cinema</span> All Rights Reserved</p>
+        <div class="social-icons">
+          <img src="./images/iconfinder_5296765_camera_instagram_instagram logo_icon_64px.png">
+          <img src="./images/iconfinder_5365678_fb_facebook_facebook logo_icon_64px.png">
+          <img src="./images/iconfinder_5296521_play_video_vlog_youtube_youtube logo_icon_64px.png">
+          <img src="./images/iconfinder_5296516_tweet_twitter_twitter logo_icon_64px.png">
+          <img src="./images/iconfinder_5296503_inspiration_pin_pinned_pinterest_social network_icon_64px.png">
+          <img src="./images/iconfinder_5296519_video_vimeo_vimeo logo_icon_64px.png">
+          <img src="./images/iconfinder_5296511_network_social network_tumblr_tumblr logo_icon_64px.png">
+        </div>
+     
+      </footer>
+      <button id='scroll-button'><i class="ri-arrow-up-line"></i></button>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.1/dist/js/bootstrap.bundle.min.js" integrity="sha384-gtEjrD/SeCtmISkJkNUaaKMoLD0//ElJ19smozuHV6z3Iehds+3Ulb9Bn9Plx0x4" crossorigin="anonymous"></script>
+    <script src="./js/bookPage.js"></script>
+  </body>
+</html>

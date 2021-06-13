@@ -110,8 +110,8 @@ border: 1px solid rgba( 255, 255, 255, 0.18 );
 }
 
 p.text {
-  margin: 5px 0;
-  width:100%;
+  margin: 5px 10%;
+  width:80%;
   font-size:1.5rem;
   font-weight: 700;
   background: rgba( 0, 0, 0, 0.25 );
@@ -206,8 +206,16 @@ p.text span {
   width:80%;
 }
 
-.seat:nth-last-child(-n+3){
+.seat:nth-last-child(-n+2){
   display:none;
 }
- 
+.seat:nth-of-type(2) {
+  margin-right: 0px;
+}
+
+.seat:nth-last-of-type(2) {
+  margin-left: 0px;
+}
+
+
   }

@@ -16,7 +16,7 @@
 }
 
 body {
-  background: url('./images/img2.jpg');
+  background: url('../images/img2.jpg');
   background-attachment: fixed;
   background-size: cover;
   color: white;

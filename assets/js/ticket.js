@@ -50,7 +50,7 @@ const printTicketNumber = (getMoviename) => {
       <footer class="ticket__footer">
         <span>Amount Paid</span>
         <p> Total Seats: ${seatCount}</p>
-        <p>GST &nbsp (28%): ${2.8 * seatCount}</p>
+        <p>GST &nbsp (28%): ${(2.8 * seatCount).toFixed(2)}</p>
         <span>Total Amount  &#8377 ${seatCount * 100 + (2.8 * seatCount)}</span>
       </footer>
     </div>

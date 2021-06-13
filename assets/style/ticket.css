@@ -21,7 +21,7 @@
 }
 
 body {
-  background: url('./images/ticket-bg.jpg');
+  background: url('../images/ticket-bg.jpg');
   background-attachment: fixed;
   background-size: cover;
   height:100vh;

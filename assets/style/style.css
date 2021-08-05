@@ -53,6 +53,7 @@ background-color: rgba(0,0,0,0.75);
 
 .header-logo {
   background: -webkit-linear-gradient(152deg, rgba(228,64,50,1) 44%, rgba(85,175,223,1) 92%);
+  background-clip:text;
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
   font-weight: 700;
@@ -100,6 +101,7 @@ background-color: rgba(0,0,0,0.75);
 .navbar-toggler-icon {
   font-size: 2rem;
   background: -webkit-linear-gradient(152deg, rgba(228,64,50,1) 44%, rgba(85,175,223,1) 92%);
+  background-clip: text;
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
 }
@@ -222,6 +224,7 @@ background-color: rgba(0,0,0,0.75);
 
   .footer-image{
     width: 100px;
+    margin-bottom:1rem;
   }
 
   .social-icons img{
@@ -402,9 +405,13 @@ overlay-image
   .footer-menu{
     font-size:0.25rem;
     text-align:center;
+    margin-top: 1rem !important;
   }
   .food-context {
   margin-left: none;
+}
+.footer-image{
+  margin-bottom: 0.5rem;
 }
 .parallax-1 {
   background: url('../images/food-image-mobile.jpg');

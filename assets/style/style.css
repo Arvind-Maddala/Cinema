@@ -380,10 +380,10 @@ border: 1px solid rgba( 255, 255, 255, 0.18 );
   .select-city .display-6{
     font-size: 1.25rem;
   }
-.parallax-context{
-  flex-direction: column;
-  padding:2rem 0.75rem;
-}
+  .parallax-context{
+    flex-direction: column;
+    padding:2rem 0.75rem;
+  }
   .food-context{
     text-align:center;
     padding-left: 0;
@@ -398,7 +398,6 @@ border: 1px solid rgba( 255, 255, 255, 0.18 );
   .food-context.display-6{
     font-size: 1rem;
   }
-overlay-image
   .overlay-image-mobile{
     display: none;
   }
@@ -409,14 +408,15 @@ overlay-image
   }
   .food-context {
   margin-left: none;
-}
-.footer-image{
-  margin-bottom: 0.5rem;
-}
-.parallax-1 {
-  background: url('../images/food-image-mobile.jpg');
-  background-size:cover;
-  background-attachment: fixed;
-}
+  }
+  .footer-image{
+    margin-bottom: 0.5rem;
+  }
+  .parallax-1 {
+    background: url('../images/food-image-mobile.jpg');
+    background-size:cover;
+    background-attachment: fixed;
+    object-fit: cover;
+  }
 }
 

@@ -345,6 +345,7 @@ border: 1px solid rgba( 255, 255, 255, 0.18 );
  .header-logo{
    margin-top: 0.75rem;
    font-size:4rem;
+   font-weight: 700;
  } 
   .fs-5{
     font-size:1.1rem !important;

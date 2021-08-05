@@ -19,7 +19,7 @@
         <div class="nav-background-overlay">
           <nav class="navbar navbar-expand-lg container navigation-wrap ">
             <div class="container-fluid">
-              <a class="navbar-brand" href="#"> <img style="width: 100px;" src="./assets/images/logo1.png"></a>
+              <a class="navbar-brand" href="#"> <img class="nav-logo" src="./assets/images/logo1.png"></a>
               <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
                 <i class="fas fa-bars navbar-toggler-icon"></i>
               </button>
@@ -41,35 +41,28 @@
               </div>
             </div>
           </nav>
-          <div class="container header-context text-center ">
-            <div class="row">
-              <div class="col header-text" >
-                <p class=" display-4"> Welcome to  &#9733  <span class="display-3"><span class="header-logo"> Cinema </span></span>&#9733  </p>
-                <p class="display-5">Safe, secure, reliable ticketing.</p>
-
+          <section class="container header-context text-center d-flex justify-content-center align-items-center">
+              <div class="col header-text text-center">
+                <p class=" display-3"> Welcome to  <span class="header-logo display-1 d-block"> Cinema </span> </p>
+                <p class="display-4">Safe, secure, reliable ticketing.</p>
               </div>
-              <div class="col ">
+              <div class="col">
                 <img class="overlay-image-1" src="./assets/images/image-1.png">
               </div>
-             
-            </div>
-            
-            
-           
-          </div>
-      </div>
+          </section>
     </header>
+
     <section class="container-fluid text-center select-city p-5">
       <div class="glass-bg">
         <div class="row">
           <div class="col-12 col-lg-7">
             <p class="display-5">Explore your favourite movies!</p>
-            <p class="display-6">Select your City to proceed !!</p>
+            <p class="display-6">Select your city and click to proceed !!</p>
           </div>
             <div class="col col-lg-5 m-0">
               <div class="row mt-4">
                 <div class="col-lg-8">
-                  <select class="form-select form-select-lg"  id="location" aria-label=".form-select-lg"  required="required">
+                  <select class="form-select form-select-lg fs-5 text"  id="location" aria-label="form-select-lg"  required="required">
                     <option class="text-center" selected disabled >Click here to select</option>
                     <option value="hyderabad">Hyderabad</option>
                     <option value="bangalore">Bangalore</option> 
@@ -86,7 +79,7 @@
       </section>
     <div class="parallax-1 ">
         <div class="parallax-overlay ">
-          <div class="parallax-context  d-lg-flex align-items-center justify-content-between">
+          <div class="parallax-context d-flex justify-content-around align-items-center"> 
             <img src="./assets/images/food-overlay-final.png" class="overlay-image">
             <div class="food-context">
               <p class="display-5">Steal the Deal! </p>

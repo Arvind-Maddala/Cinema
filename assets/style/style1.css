@@ -25,24 +25,20 @@ body {
 
 
 .glass-overlay {
-  margin:2rem;
   background: rgba(255, 255, 255, 0.15);
-box-shadow: 0 8px 32px 0 rgba(23, 23, 29, 0.37);
-backdrop-filter: blur( 9px );
--webkit-backdrop-filter: blur( 4px );
-border-radius: 10px;
-border: 1px solid rgba( 255, 255, 255, 0.18 );
+  box-shadow: 0 8px 32px 0 rgba(23, 23, 29, 0.37);
+  backdrop-filter: blur( 9px );
+  -webkit-backdrop-filter: blur( 4px );
+  border-radius: 10px;
+  border: 1px solid rgba( 255, 255, 255, 0.18 );
 }
-.movie-container {
-  margin: 20px 0;
-}
+
 .main {
   height:100vh;
 }
 
 .container {
   perspective: 1000px;
-  margin-bottom: 30px;
 }
 .movie-screen {
   width: 60%;
@@ -110,14 +106,11 @@ border: 1px solid rgba( 255, 255, 255, 0.18 );
 }
 
 p.text {
-  margin: 5px 10%;
-  width:80%;
   font-size:1.5rem;
   font-weight: 700;
   background: rgba( 0, 0, 0, 0.25 );
   background: rgba( 0, 0, 0, 0.00 );
   background: rgba( 0, 0, 0, 0.85 );
-box-shadow: 0 8px 32px 0 rgba( 31, 38, 135, 0.37 );
 backdrop-filter: blur( 20.0px );
 -webkit-backdrop-filter: blur( 20.0px );
 border-radius: 10px;
@@ -130,11 +123,16 @@ p.text span {
 
 }
 
+.bookNow{
+  padding: 0.75rem 1.25rem;
+}
+
   /* Footer */
 
 
   .footer-image{
     width: 100px;
+    margin-bottom:1rem;
   }
 
   .social-icons img{
@@ -148,7 +146,6 @@ p.text span {
     padding-top: 1rem;;
     background: black;
     color: #fff;
-    width: 100vw;;
   }
   .footer-menu h4{
     font-size:1rem;
@@ -182,13 +179,22 @@ p.text span {
   
   @media (max-width:768px){
     
+
   .footer-menu{
     font-size:0.25rem;
     text-align:center;
+    margin-top: 1rem !important;
   }
 
+  .footer-image{
+    margin-bottom: 0.5rem;
+  }
   .main{
     height:100%;
+    margin:2rem 1.5rem; 
+  }
+  .movie-container {
+    margin-bottom: 2rem;
   }
   .context {
     display:flex;
@@ -206,16 +212,14 @@ p.text span {
   width:80%;
 }
 
-.seat:nth-last-child(-n+2){
+.seat:nth-last-child(-n+4){
   display:none;
 }
-.seat:nth-of-type(2) {
-  margin-right: 0px;
-}
 
-.seat:nth-last-of-type(2) {
-  margin-left: 0px;
-}
+  }
 
-
+  @media (max-width:400px){
+    .seat:nth-last-child(-n+5){
+      display:none;
+    }
   }

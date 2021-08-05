@@ -4,28 +4,38 @@ let getCityLocal = localStorage.getItem('city').toLowerCase();
 let getCity = document.getElementById('getCity');
 let getLanguage = document.getElementById('getLanguage');
 let getGenre = document.getElementById('getGenre');
-let cityLogo = document.getElementById('cityLogo')
-clearLocalStorage()
-headerpicture();
+let cityLogo = document.getElementById('cityLogo');
+let city = localStorage.getItem('city')
 
-// HTTP Request
+ // Fetch request
 
-const fetchMovies = ()=> {
-
-fetch('../../movies.json')
-.then(res => res.json())
-.then(data => {
+ const fetchMovies = async () => {
+  let res = await fetch('../../movies.json')
+  let data = await res.json();
   getMovies = data.movies.filter((elem) => elem.city.includes(getCityLocal)); 
-  console.log(getMovies);
   showMovies(getMovies)
-})
 }
+// on movie select
+  function selectMovie(id){
+  localStorage.setItem('movie', id);
+  window.location.href = '/bookPage.html'
+  }
 
-fetchMovies();
 
-const showMovies = (getMovies)=> {
-  main.innerHTML = '';
-  getMovies.forEach(movie => {
+//Movies display
+
+const showMovies = async (getMovies)=> {
+    main.innerHTML = '';
+    if(getMovies.length == 0) {
+    const movieEl = document.createElement('div');
+    movieEl.classList.add('notfound');
+    movieEl.innerHTML = `
+    <i class="fas fa-exclamation-triangle"></i>
+    <p> No Movies found, please search for other genre </p>
+    `
+    main.appendChild(movieEl);
+    }
+    await getMovies.forEach(movie => {
     const { Poster,Title,imdbID} = movie;
     const movieEl = document.createElement('div');
     movieEl.classList.add('movie');
@@ -33,7 +43,7 @@ const showMovies = (getMovies)=> {
     <img src="${Poster}" class="card-img-top" alt="${Title}" />
     <div class="card-body">
       <h5 class="card-title">${Title}</h5>
-        <a href="#" class="btn btn-danger bookNow" onClick ="selectMovie('${imdbID}')"  >Book Now</a>
+        <button href="#" class="btn btn-danger bookNow" onclick = "selectMovie('${imdbID}')" >Book Now</button>
     </div>
     `
     main.appendChild(movieEl);
@@ -41,99 +51,62 @@ const showMovies = (getMovies)=> {
 }
 
 
-//Filter by Genre 
 
-getLanguage.addEventListener('change', (e) => {
-  e.preventDefault();
-  let lang = getLanguage.value;
-  localStorage.setItem('lang', lang);
-  let genre = localStorage.getItem("genre");
-  let data = getData(genre, lang) || [];
-  showMovies(data)
+//Filter by Language and Genre
+
+
+getLanguage.addEventListener('change', async (e) => {
+e.preventDefault();
+let lang = getLanguage.value;
+let res = await fetch('../../movies.json')
+let data = await res.json();
+getMovies = data.movies.filter((elem) => elem.language === lang); 
+showMovies(getMovies)
 })
 
-getGenre.addEventListener('change', (e) => {
-  let genre = getGenre.value
-  localStorage.setItem('genre', genre)
-  let lang = localStorage.getItem('lang')
-  let data = getData(genre, lang) || []
-  showMovies(data)
+getGenre.addEventListener('change', async (e) => {
+let genre = getGenre.value;
+let lang = getLanguage.value;
+if(!lang) alert('Please select a language')
+let res = await fetch('../../movies.json')
+let data = await res.json();
+getMovies = data.movies.filter((elem) => elem.genre === genre && elem.language === lang); 
+showMovies(getMovies)
 })
-
-
-function getData(genre, lang) {
-  if (genre == "" && lang == "") {
-    return getMovies
-  } else if (genre != "" && lang == "") {
-    let data = [];
-    getMovies.forEach((elem) => {
-      if (elem.genre == genre) {
-        data.push(elem)
-      }
-    })
-    return data;
-
-  } else if (genre == "" && lang != "") {
-    let data = [];
-    getMovies.forEach((elem) => {
-      if (elem.language == lang) {
-        data.push(elem)
-      }
-    })
-    return data
-
-  } else if (genre != "" && lang != "") {
-    let data = [];
-    getMovies.forEach((elem) => {
-      if (elem.genre == genre && elem.language == lang) {
-        data.push(elem)
-      }
-    })
-    return data
-  }
-  return getMovies
-}
-
-function headerpicture() {
-  if(localStorage.getItem('city') == 'hyderabad'){
-    getCity.innerText = 'Hyderabad';
-    cityLogo.src = '../../assets/images/hyd.png'
-  }else if(localStorage.getItem('city') == 'bangalore'){
-    getCity.innerText = 'Bangalore';
-    cityLogo.src = '../../assets/images/bengalore.png'
-} else if(localStorage.getItem('city') == 'mumbai'){
-  getCity.innerText = 'Mumbai';
-  cityLogo.src = '../../assets/images/mumbai.png'
-}
-}
-
-
-
-
-
-function selectMovie(id) {
-  localStorage.setItem('movie', id);
-  window.location.href = '/bookPage.html'
-}
-
-const scrollButtonJS = ()=>{
-  const scrollButton = document.getElementById('scroll-button');
-  scrollButton.addEventListener('click',()=>{
-      window.scrollTo({
-          top:0,
-          left:0,
-          behavior:'smooth'
-      })
-  })
-
-}
-
-scrollButtonJS();
 
 //Clearing LocalStorage values;
 
-function clearLocalStorage() {
-  localStorage.removeItem('ticketNumbers');
-  localStorage.removeItem('selectedSeats');
+const clearLocalStorage = () =>{
+localStorage.removeItem('ticketNumbers');
+localStorage.removeItem('selectedSeats');
 
 }
+
+// City picture and name
+
+const headerpicture = () => {
+  getCity.innerText = city.charAt(0).toUpperCase() + city.slice(1);
+  cityLogo.src = `../../assets/images/${city}.png`;
+}
+
+//Scroll Button 
+
+const scrollButtonJS = () =>{
+const scrollButton = document.getElementById('scroll-button');
+scrollButton.addEventListener('click',()=>{
+    window.scrollTo({
+        top:0,
+        left:0,
+        behavior:'smooth'
+    })
+})
+
+}
+
+
+fetchMovies();
+clearLocalStorage()
+headerpicture();
+scrollButtonJS();
+
+ 

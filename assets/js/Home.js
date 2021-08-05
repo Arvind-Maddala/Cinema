@@ -5,8 +5,10 @@ let getCity = document.getElementById('getCity')
 getCity.addEventListener('click', (e) => {
   e.preventDefault()
   let city = getLocation.value;
-
-console.log(city)
+  if(city !='hyderabad' && city !='bangalore' && city !='mumbai') {
+    alert('Please select city')
+    return
+   } ;
   localStorage.setItem('city', city);
   window.location.href = '/movies.html'
 })

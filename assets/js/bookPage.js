@@ -29,7 +29,6 @@ function seatUpdate() {
     idArray.push(x)
   }
   seatNumbers.innerText = idArray.join(', ');
-  console.log(selectedSeatsNumbers)
   localStorage.setItem('ticketNumbers', JSON.stringify(idArray));
   localStorage.setItem('selectedSeats', JSON.stringify(seatsIndex));
 
@@ -52,7 +51,7 @@ function localStorageData() {
 }
 }
 
-seatUpdate();
+
 
 const scrollButtonJS = ()=>{
   const scrollButton = document.getElementById('scroll-button');
@@ -66,7 +65,7 @@ const scrollButtonJS = ()=>{
 
 }
 
-scrollButtonJS();
+
 
 function confirmBooking(){
   if(JSON.parse(localStorage.getItem('selectedSeats')).length > 0) {
@@ -79,15 +78,11 @@ function confirmBooking(){
 
 
 
-const getPoster = ()=> {
-
-  fetch('../movies.json')
-  .then(res => res.json())
-  .then(data => {
-    console.log(data)
+const getPoster = async ()=> {
+    let res = await fetch('../movies.json')
+    let data = await res.json()
     const getMoviePoster = data.movies.filter((elem) => elem.imdbID == movie); 
     getMovie(getMoviePoster)
-  })
   }
 
 
@@ -101,7 +96,7 @@ const getMovie = (getMoviePoster)=> {
     <img src="${Poster}" class="card-img-top mt-5" alt="${Title}" />
     <div class="card-body">
       <h5 class="card-title">${Title}</h5>
-        <a href="#" class="btn btn-danger bookNow" onClick ="confirmBooking()"  >Confirm Booking</a>
+        <a href="#" class="btn btn-danger bookNow" onclick ="confirmBooking()">Confirm Booking</a>
     </div>
     `
     movieTicket.appendChild(movieEl);
@@ -109,3 +104,5 @@ const getMovie = (getMoviePoster)=> {
 }
 
 getPoster();
+scrollButtonJS();
+seatUpdate();

@@ -93,6 +93,7 @@
 				"mumbai"
 			],
 			"Type": "movie",
+			"language":"korean",
 			"genre": "love",
 			"Poster": "https://m.media-amazon.com/images/M/MV5BYTJlMmIwYjAtYWJmYy00YzE2LWE1OTYtZjIyMzg0YWUwOTg4XkEyXkFqcGdeQXVyMTA1NTM1NDI2._V1_SX300.jpg"
 		},
@@ -207,6 +208,7 @@
 			"Title": "The Avenger",
 			"Year": "1962",
 			"imdbID": "tt0056174",
+			"genre": "action",
 			"Type": "movie",
 			"city": [
 				"hyderabad",
@@ -351,6 +353,7 @@
 			"Year": "2017–",
 			"imdbID": "tt7099334",
 			"Type": "series",
+			"language": "korean",
 			"city": [
 				"hyderabad"
 			],
@@ -439,27 +442,27 @@
 			"Poster": "https://m.media-amazon.com/images/M/MV5BNDkxZjRhYmQtMzQ5OC00ZWZjLWFlMGYtMmM2MjJkMzU5YWI3XkEyXkFqcGdeQXVyMjIyMTAzNzM@._V1_SX300.jpg"
 		},
 		{
-			"Title": "Ong-Bak: The Thai Warrior",
+			"Title": "Ong-Bak: The korean Warrior",
 			"Year": "2003",
 			"imdbID": "tt0368909",
 			"Type": "movie",
 			"city": "bangalore",
-			"language": "thai",
+			"language": "korean",
 			"genre": "action",
 			"Poster": "https://m.media-amazon.com/images/M/MV5BNDg4MmQyODgtM2Q4ZC00ZWI2LWJkYmMtYTQ5ZGI5NDJhN2IwXkEyXkFqcGdeQXVyNzgzODI1OTE@._V1_SX300.jpg"
 		},
 		{
-			"Title": "The Legend of Muay Thai: 9 Satra",
+			"Title": "The Legend of Muay korean: 9 Satra",
 			"Year": "2018",
 			"imdbID": "tt7717440",
 			"Type": "movie",
-			"language": "thai",
+			"language": "korean",
 			"city": "bangalore",
 			"genre": "action",
 			"Poster": "https://m.media-amazon.com/images/M/MV5BZTA0OTc5NDktZDQ0Ni00YzM2LTkyMzQtZjM3MjcxODNhNDEzXkEyXkFqcGdeQXVyNTk1NTkxMDI@._V1_SX300.jpg"
 		},
 		{
-			"Title": "Muay Thai Fighter",
+			"Title": "Muay korean Fighter",
 			"Year": "2007",
 			"imdbID": "tt1090782",
 			"Type": "movie",
@@ -467,24 +470,24 @@
 				"mumbai",
 				"bangalore"
 			],
-			"language": "thai",
+			"language": "korean",
 			"genre": "action",
 			"Poster": "https://m.media-amazon.com/images/M/MV5BMTgyMjQ3MzU2Ml5BMl5BanBnXkFtZTgwNTY1NTk1MDE@._V1_SX300.jpg"
 		},
 		{
-			"Title": "Muay Thai Giant",
+			"Title": "Muay korean Giant",
 			"Year": "2008",
 			"imdbID": "tt1251761",
 			"Type": "movie",
 			"city": [
 				"hyderabad"
 			],
-			"language": "thai",
+			"language": "korean",
 			"genre": "action",
 			"Poster": "https://m.media-amazon.com/images/M/MV5BMTY0NjU2MTEyNV5BMl5BanBnXkFtZTcwNjQwMzU5NA@@._V1_SX300.jpg"
 		},
 		{
-			"Title": "Thai Jashe!",
+			"Title": "korean Jashe!",
 			"Year": "2016",
 			"imdbID": "tt5545568",
 			"Type": "movie",
@@ -497,7 +500,7 @@
 			"Poster": "https://m.media-amazon.com/images/M/MV5BM2ZlYzY4NTYtYWZmZi00OWEwLWFjYzctMzQwYWI1NDQ3MjE2XkEyXkFqcGdeQXVyNjU4MDU2Mjk@._V1_SX300.jpg"
 		},
 		{
-			"Title": "Thai Curry",
+			"Title": "korean Curry",
 			"Year": "2019",
 			"imdbID": "tt9890052",
 			"Type": "movie",
@@ -509,17 +512,17 @@
 			"Poster": "https://m.media-amazon.com/images/M/MV5BY2E1NzZmMjMtODc0Zi00YWY5LWE3YzAtNjI4NzkwZDBlNjE0XkEyXkFqcGdeQXVyODk4MjQyMzk@._V1_SX300.jpg"
 		},
 		{
-			"Title": "My Thai Bride",
+			"Title": "My korean Bride",
 			"Year": "2011",
 			"imdbID": "tt2090573",
 			"Type": "movie",
 			"city": "bangalore",
-			"language": "thai",
+			"language": "korean",
 			"genre": "action",
 			"Poster": "https://m.media-amazon.com/images/M/MV5BMTcxNDExNjgxMl5BMl5BanBnXkFtZTgwOTkwODAwNjE@._V1_SX300.jpg"
 		},
 		{
-			"Title": "Daav Thai Gayo Yaar",
+			"Title": "Daav korean Gayo Yaar",
 			"Year": "2016",
 			"imdbID": "tt5894252",
 			"Type": "movie",
@@ -574,7 +577,7 @@
 			"Year": "2005",
 			"imdbID": "tt0427954",
 			"Type": "movie",
-			"language": "thai",
+			"language": "korean",
 			"city": [
 				"hyderabad",
 				"mumbai"

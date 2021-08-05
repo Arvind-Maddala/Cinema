@@ -449,6 +449,8 @@ border: 1px solid rgba( 255, 255, 255, 0.18 );
   .fa-exclamation-triangle {
     font-size: 3rem;
   }
-
+.input-group-text{
+  width:100px !important;
+}
 }
 

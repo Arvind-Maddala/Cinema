@@ -436,5 +436,19 @@ border: 1px solid rgba( 255, 255, 255, 0.18 );
     background-attachment: fixed;
     object-fit: cover;
   }
+
+  .notfound{
+    padding: 1.5rem;
+    text-align: center;
+    font-size:1.25rem;
+  }
+  .notfound p{
+    margin:0.5rem;
+  
+  }
+  .fa-exclamation-triangle {
+    font-size: 3rem;
+  }
+
 }
 
